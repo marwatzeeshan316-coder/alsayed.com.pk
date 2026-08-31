@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Materials Suppliers in Islamabad and Rawalpindi | Al-Sayed</title>
+    <meta name="description" content="Looking for trusted building materials in Islamabad and Rawalpindi? Al-Sayed Building Materials provides bricks, cement, sand, and crush with fast delivery.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #060b14; 
+            color: #f1f5f9;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -3;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+
+        .video-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.15), transparent 70%);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(6, 11, 20, 0.92) 0%, rgba(11, 19, 41, 0.88) 100%);
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(6, 11, 20, 0.9);
+            backdrop-filter: blur(14px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(2, 132, 199, 0.2);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #f97316;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 4px 10px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            font-size: 0.9rem;
+            padding: 4px;
+            width: 130px;
+        }
+
+        .search-box input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-box button {
+            background: transparent;
+            border: none;
+            color: #0284c7;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .btn-quote-nav {
+            background: linear-gradient(135deg, #f97316, #ea580c) !important;
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .hero {
+            padding: 120px 5% 80px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero h1 span {
+            color: #f97316;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #cbd5e1;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #334155;
+        }
+
+        .container {
+            padding: 70px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px 25px;
+            border: 1px solid rgba(30, 41, 59, 0.8);
+        }
+
+        .card h3 {
+            color: #f97316;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .local-seo-section {
+            background: rgba(11, 19, 41, 0.6);
+            padding: 60px 5%;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .local-seo-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .local-seo-content h2 {
+            font-size: 1.7rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .local-seo-content p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .footer-cta {
+            padding: 60px 5%;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(8, 14, 26, 0.7) 0%, rgba(3, 6, 12, 0.95) 100%);
+        }
+
+        .footer-cta h2 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .footer-cta p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020408;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="video-glow"></div>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search materials...">
+            <button onclick="searchWebsite()">Search</button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="ourprojects.html">Projects</a>
+            <a href="bricks.html">Bricks</a>
+            <a href="cement.html">Cement</a>
+            <a href="sand.html">Sand</a>
+            <a href="crush.html">Crush</a>
+            <a href="generalsupply.html">General Supply</a>
+            <a href="contactus.html">Contact</a>
+            <a href="https://wa.me/923109871812" class="btn-quote-nav" target="_blank">Get Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Trusted Building Materials in <span>Islamabad and Rawalpindi</span></h1>
+        <p>We deliver high-quality bricks, cement, sand, and stone crush straight to your construction and housing sites across the twin cities.</p>
+        <div class="hero-buttons">
+            <a href="bricks.html" class="btn-primary">View Bricks</a>
+            <a href="generalsupply.html" class="btn-secondary">Our Services</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Our Building Materials</h2>
+            <p>Strong, durable, and trusted materials for your buildings.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3>Bricks</h3>
+                <p>High-quality kiln bricks with great strength for strong walls and structures.</p>
+                <a href="bricks.html" class="card-link">Explore Bricks &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>General Supply</h3>
+                <p>We handle bulk material orders and heavy transport to your project sites safely and on time.</p>
+                <a href="generalsupply.html" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>Our Projects</h3>
+                <p>See our past material deliveries and construction supply work in Islamabad and Rawalpindi.</p>
+                <a href="ourprojects.html" class="card-link">View Projects &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="local-seo-section">
+        <div class="local-seo-content">
+            <h2>Why Choose Al-Sayed Building Materials?</h2>
+            <p>Finding a reliable supplier in Islamabad and Rawalpindi is important to finish your building work on time. We offer fair prices, honest quantities, and fast delivery.</p>
+            <p>Whether you are building a house in Bahria Town, DHA, or anywhere in the twin cities, we supply the best sand, cement, crush, and bricks you need.</p>
+        </div>
+    </section>
+
+    <section class="footer-cta">
+        <h2>Ready to Build? Talk to Us Today</h2>
+        <p>Send us a message on WhatsApp to get the best market rates and book your delivery.</p>
+        <a href="https://wa.me/923109871812" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Al-Sayed Building Materials, Islamabad. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchWebsite() {
+            let query = document.getElementById('searchInput').value.toLowerCase();
+            if(query.includes('brick')) {
+                window.location.href = 'bricks.html';
+            } else if(query.includes('cement')) {
+                window.location.href = 'cement.html';
+            } else if(query.includes('sand')) {
+                window.location.href = 'sand.html';
+            } else if(query.includes('crush')) {
+                window.location.href = 'crush.html';
+            } else if(query.includes('project')) {
+                window.location.href = 'ourprojects.html';
+            } else if(query.includes('contact')) {
+                window.location.href = 'contactus.html';
+            } else {
+                alert('Please type a material name like bricks, cement, sand, or crush.');
+            }
+        }
+    </script>
+</body>
+</html>
